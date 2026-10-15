@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1779805296533,
-  "repoUrl": "https://github.com/py-pdf/pypdf",
+  "lastUpdate": 1792055743433,
+  "repoUrl": "https://github.com/metsw24-max/pypdf",
   "entries": {
     "CPython Benchmark": [
       {
@@ -97223,6 +97223,72 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0013070250076779235",
             "extra": "mean: 664.6330155999976 msec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "96178532+stefan6419846@users.noreply.github.com",
+            "name": "Stefan",
+            "username": "stefan6419846"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9f861003511cc5d732d766bd4f6d3c864998e30b",
+          "message": "DEV: Ignore ruff rule ICN001 (#4206)\n\nThe rule is about doing things like `from datetime import dt`.\r\n\r\nWe want to avoid abbreviations, thus this would be the exact opposite. Personally, I have not seen much code which uses these short variant as well, and it does not really feel more readable.\r\n\r\nDocs: https://docs.astral.sh/ruff/rules/unconventional-import-alias/\r\n\r\nBackground: This rule triggers when we would run against `ruff` 0.17.0.",
+          "timestamp": "2026-10-14T19:32:32+02:00",
+          "tree_id": "72c3f7310173b3a071bfcc4c47ffec1f3e48ca02",
+          "url": "https://github.com/metsw24-max/pypdf/commit/9f861003511cc5d732d766bd4f6d3c864998e30b"
+        },
+        "date": 1792055738620,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 5.2452780504217555,
+            "unit": "iter/sec",
+            "range": "stddev: 0.009301229544035726",
+            "extra": "mean: 190.6476626000014 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 32.90475454618414,
+            "unit": "iter/sec",
+            "range": "stddev: 0.007964298618981062",
+            "extra": "mean: 30.390744857143048 msec\nrounds: 35"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.41902142260406583,
+            "unit": "iter/sec",
+            "range": "stddev: 0.016969284465271777",
+            "extra": "mean: 2.3865128274000016 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 32.13292546501243,
+            "unit": "iter/sec",
+            "range": "stddev: 0.003223669763744978",
+            "extra": "mean: 31.12072696551824 msec\nrounds: 29"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.13643526183111074,
+            "unit": "iter/sec",
+            "range": "stddev: 0.12274215121982476",
+            "extra": "mean: 7.329483496999998 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_large_compressed_image_performance",
+            "value": 2.6761472286572343,
+            "unit": "iter/sec",
+            "range": "stddev: 0.006579387694915015",
+            "extra": "mean: 373.6715190000041 msec\nrounds: 5"
           }
         ]
       }
